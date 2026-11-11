@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><%= appName %> - Songs</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h2><%= appName %></h2>
+
+        <div>
+            <a href="/">Home</a>
+            <a href="/songs">Songs</a>
+        </div>
+    </nav>
+
+    <section class="songs-section">
+
+        <h1>Our Songs</h1>
+
+        <p><%= tagline %></p>
+
+        <div class="song-container">
+
+            <% songs.forEach(function(song) { %>
+
+                <div class="song-card">
+
+                    <h2>🎵 <%= song.title %></h2>
+
+                    <p>
+                        <strong>Artist:</strong>
+                        <%= song.artist %>
+                    </p>
+
+                    <p>
+                        <strong>Genre:</strong>
+                        <%= song.genre %>
+                    </p>
+
+                </div>
+
+            <% }); %>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
